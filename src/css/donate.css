@@ -235,6 +235,16 @@
   button{
     padding-top: 5px;
     padding-bottom: 5px;
+    background: linear-gradient(90deg, rgba(253,190,51,1) 0%, rgba(255,255,255,1) 100%);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    &:hover {
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(253,190,51,1) 100%);
+    }
   }
   .form{
     display: grid;

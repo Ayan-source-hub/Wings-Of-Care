@@ -4,17 +4,17 @@
 .contact {
     position: relative;
     width: 100%;
-    padding: 35px 0;
-    padding-bottom: 70px;
-    background: linear-gradient(
-      45deg,
-      rgb(1, 24, 54) 11.2%,
-      rgba(0, 37, 84, 0.8) 100.2%
-    );
+    min-height: 500px;
+    padding: 35px 0 70px 0;
+    background: url('../assets/contact_us.jpeg') center center/cover no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .container{
       h3{
         font-size: 24px;
-        color: #fdbe33;
+        color: #000000;
       }
       h2{
         font-size: 37px;
@@ -39,13 +39,14 @@
   
   .contact .contact-form {
     position: relative;
-    width: 100%;
+    width: 50%;
     max-width: 700px;
     margin: 0 auto;
-    margin-top: -220px;
+    margin-top: 0;
     padding: 30px;
-    background: #f3f6ff;
+    background: #f3f6ffcc; /* semi-transparent white */
     border-radius: 12px;
+    z-index: 2;
     .sent{
       padding-bottom: 15px;
       text-align: center;

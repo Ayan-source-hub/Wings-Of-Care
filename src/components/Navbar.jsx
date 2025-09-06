@@ -1,10 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import '../css/navbar.css';
+import FoodDonationFormPopup from "./FoodDonationFormPopup";
+import "./FoodDonationFormPopup.css";
+import AdminLoginPopup from "./AdminLoginPopup";
+import "./AdminLoginPopup.css";
 
 export default function Navbar() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [auth, setAuth] = useState("");
+    const [showFoodDonation, setShowFoodDonation] = useState(false);
+    const [showAdminLogin, setShowAdminLogin] = useState(false);
     const path = useLocation().pathname;
     const navigate = useNavigate();
 
@@ -43,27 +49,22 @@ export default function Navbar() {
                         <div className="col-md-8">
                             <div className="top-bar-left">
                                 <div className='text'>
-                                    <Link to='/admin'><i title='ADMIN' className='fa fa-solid fa-user-tie m-0' style={{ fontSize: "21px" }} /></Link>
+                                    <button className="admin-login-btn" style={{background: "none", border: "none", padding: 0, margin: 0}} onClick={() => setShowAdminLogin(true)}>
+                                        <i title='ADMIN' className='fa fa-solid fa-user-tie m-0' style={{ fontSize: "21px", color: "#FDBE33" }} />
+                                    </button>
                                 </div>
                                 <div className="text">
                                     <i className="fa fa-phone"></i>
-                                    <a href="tel:+91-7385223242"><p>+91-7385223242</p></a>
+                                    <a href="tel:91-8646795432"><p>91-8646795432</p></a>
                                 </div>
                                 <div className="text">
                                     <i className="fa fa-envelope"></i>
-                                    <a href="mailto:sanjivani.vitswd@vit.edu"><p>sanjivani.vitswd@vit.edu</p></a>
+                                    <a href="mailto:wingsofcare@kol.org"><p>wingsofcare@kol.org</p></a>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4">
                             <div className="top-bar-right">
-                                <div className="social">
-                                    <a href="https://twitter.com/vit_socials"><i className="fab fa-x-twitter"></i></a>
-                                    <a href="https://www.facebook.com/vitsocials"><i className="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/vitsocials/"><i className="fab fa-instagram"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCJnaNm8Ns08rUIhsdFM2fhA"><i className="fab fa-youtube"></i></a>
-                                    <a href="https://www.linkedin.com/company/vit-social-welfare-development/"><i className="fab fa-linkedin-in"></i></a>
-                                </div>
                                 {auth.length>0 && <button onClick={()=>{(auth==="USER"?localStorage.removeItem("NGO"):localStorage.removeItem("ADMIN_NGO")); setAuth(""); navigate("/");}} type='button' className='btn btn-outline-danger'>LOGOUT {auth}</button>}
                             </div>
                         </div>
@@ -75,7 +76,7 @@ export default function Navbar() {
             {/* <!-- Nav Bar Start --> */}
             <div className="navbar navbar-expand-lg bg-dark navbar-dark">
                 <div className="container-fluid">
-                    <Link to="/" className="navbar-brand">SANJIVANI</Link>
+                    <Link to="/" className="navbar-brand">wings of care</Link>
                     <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -92,6 +93,7 @@ export default function Navbar() {
                                     <Link to="/about" className="dropdown-item">What We Do</Link>
                                     <Link to="/event" className="dropdown-item">Meet The Team</Link>
                                     <Link to="/contact" className="dropdown-item">Become A Volunteer</Link>
+                                    <Link to="#" className="dropdown-item" onClick={e => { e.preventDefault(); setShowFoodDonation(true); }}>Food Donation</Link>
                                     <hr className='dropdown-divider' />
                                     <Link to="/donate" className="dropdown-item">Donate Now</Link>
                                 </div>
@@ -102,6 +104,8 @@ export default function Navbar() {
                 </div>
             </div>
             {/* <!-- Nav Bar End --> */}
+            {showFoodDonation && <FoodDonationFormPopup onClose={() => setShowFoodDonation(false)} />}
+            {showAdminLogin && <AdminLoginPopup onClose={() => setShowAdminLogin(false)} />}
         </>
     );
 }

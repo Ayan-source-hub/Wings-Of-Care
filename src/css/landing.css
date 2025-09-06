@@ -6,8 +6,8 @@
     height: 600px;
     background: linear-gradient(
       109.6deg,
-      rgb(1, 24, 54) 11.2%,
-      rgba(0, 37, 84, 0.8) 100.2%
+      rgb(130, 130, 46) 11.2%,
+      rgba(150, 106, 41, 0.8) 100.2%
     );
     @media (max-width: 767.98px) {
       flex-direction: column;

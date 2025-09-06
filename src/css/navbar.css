@@ -9,7 +9,7 @@
     left: 0;
     z-index: 3;
     border-bottom: 1px solid rgba(255, 255, 255, .3);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(243, 94, 25, 0.2);
 }
 
 .top-bar .top-bar-left {
@@ -159,7 +159,7 @@
     
     .navbar.nav-sticky {
         padding: 10px 60px;
-        background: #20212B !important;
+        background: #2b2420 !important;
         border-bottom: none;
     }
     
@@ -180,7 +180,7 @@
     }
     .navbar {
         padding: 15px;
-        background: #20212B !important;
+        background: #f1bc0d !important;
     }
     
     .navbar a.nav-link {

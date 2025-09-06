@@ -21,62 +21,47 @@ const Initiatives = () => {
   const InCards = [
     {
       key: uuidv4(),
-      content: <img src={sudhaar} alt="1" />,
-      link: "https://swd.vit.edu/flagship/rr/rr.html"
+      content: <img src={sudhaar} alt="1" />
     },
     {
       key: uuidv4(),
-      content: <img src={gyaan} alt="2" />,
-      link: "https://swd.vit.edu/flagship/utkrash/utkarsh.html"
+      content: <img src={gyaan} alt="2" />
     },
     {
       key: uuidv4(),
-      content: <img src={nirmaan} alt="3" />,
-      link: "https://youtu.be/9xoo9GvsK5o?list=TLGGZyE3b9VU8G8yNDAyMjAyNA"
+      content: <img src={nirmaan} alt="3" />
     },
     {
       key: uuidv4(),
-      content: <img src={gogreen} alt="4" />,
-      link: "https://youtu.be/eifgT3ustW0?list=TLGGYDK2KB_YQJMyNDAyMjAyNA"
+      content: <img src={gogreen} alt="4" />
     },
     {
       key: uuidv4(),
-      content: <img src={muskaan} alt="5" />,
-      link: "https://swd.vit.edu/flagship/blood-d/blood.html"
+      content: <img src={muskaan} alt="5" />
     },
     {
       key: uuidv4(),
-      content: <img src={sudhaar} alt="1" />,
-      link: "https://swd.vit.edu/flagship/rr/rr.html"
+      content: <img src={sudhaar} alt="1" />
     },
     {
       key: uuidv4(),
-      content: <img src={gyaan} alt="2" />,
-      link: "https://swd.vit.edu/flagship/aatmabodh/aatmabodh.html"
+      content: <img src={gyaan} alt="2" />
     },
     {
       key: uuidv4(),
-      content: <img src={nirmaan} alt="3" />,
-      link: "https://youtu.be/9xoo9GvsK5o?list=TLGGZyE3b9VU8G8yNDAyMjAyNA"
+      content: <img src={nirmaan} alt="3" />
     },
     {
       key: uuidv4(),
-      content: <img src={gogreen} alt="4" />,
-      link: "https://youtu.be/eifgT3ustW0?list=TLGGYDK2KB_YQJMyNDAyMjAyNA"
+      content: <img src={gogreen} alt="4" />
     },
     {
       key: uuidv4(),
-      content: <img src={muskaan} alt="5" />,
-      link: "https://swd.vit.edu/flagship/blood-d/blood.html"
+      content: <img src={muskaan} alt="5" />
     },
   ].map((slide, index) => {
     return {
       ...slide,
-      onClick: () => {
-        if (index === card.goToSlide)
-          window.open(slide.link);
-        setCard({ ...card, goToSlide: index })
-      }
     }
   });
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import contact from "../assets/contactus.png";
+import contactBg from "../assets/contactus.png";
 import '../css/contactForm.css';
 
 function ContactForm() {
@@ -73,10 +73,7 @@ function ContactForm() {
                         <h3>Get In Touch</h3>
                         <h2>Contact for any query</h2>
                     </div>
-                    <div className="contact-img">
-                        <img src={contact} alt="Image" />
-                    </div>
-                    <div className="contact-form">
+                    <div className="contact-form" style={{ background: 'rgba(255,255,255,0.85)', borderRadius: '16px', padding: '32px', maxWidth: '500px', margin: '0 auto', boxShadow: '0 4px 24px rgba(0,0,0,0.08)' }}>
                         <div className='sent text-success' id="success"></div>
                         <form name="sentMessage" id="contactForm" onSubmit={handleSubmit} noValidate>
                             <div className="control-group">

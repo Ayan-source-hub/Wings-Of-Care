@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import space from '../assets/Space.mp4';
+import space from '../assets/bbc.mp4';
 import '../css/home.css';
 import Initiatives from "../components/Initiatives";
 import Footer from "../components/Footer";
@@ -7,6 +7,7 @@ import ContactForm from "../components/ContactForm";
 import Landing from "../components/Landing";
 import Funds from "../components/Funds";
 import BackToTop from "../components/BackToTop";
+import ChatbotWidget from "../components/ChatbotWidget";
 
 export default function Home() {
     return (
@@ -17,7 +18,7 @@ export default function Home() {
                     Sorry, your browser doesn't support videos.
                 </video>
                 <div className="typewriter">
-                    <h2>ACTION, SERVICE, HOPE FOR AIDS... </h2>
+                    <h2>Together for a Better Tomorrow...</h2>
                 </div>
             </div>
             <Landing />
@@ -26,6 +27,7 @@ export default function Home() {
             <ContactForm />
             <Footer />
             <BackToTop />
+            <ChatbotWidget />
         </>
     );
 }

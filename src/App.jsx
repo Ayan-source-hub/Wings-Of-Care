@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
 import SignUp from "./pages/SignUp";
 import Admin from "./pages/Admin";
+import "./components/ChatbotWidget.css";
 
 export default function App() {
   return (
